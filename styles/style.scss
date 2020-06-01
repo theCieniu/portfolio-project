@@ -1,0 +1,86 @@
+$text: calc(1.5rem + 1vw);
+$header1: calc(2rem + 1vw);
+$header2: calc(3.5rem + 1vw);
+$header3: calc(3rem + 1vw);
+$header4: calc(2.4rem + 1vw);
+$header5: calc(2rem + 1vw);
+
+$dark: #111;
+$medium: #666670;
+$light: #c3c3c3;
+$color1: #9cce40;
+$color2: #32c8b3;
+$whitish: #fffff5;
+
+@mixin flex($direction, $justify) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: center;
+}
+
+@import "header";
+@import "footer";
+@import "responsive";
+
+/*======= GLOBAL STYLES ===========*/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100vw;
+  overflow-x: hidden;
+  color: $dark;
+  font-size: $text;
+}
+
+img {
+  width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+a:link,
+a:visited {
+  color: (internal value);
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.5s ease-in-out;
+}
+
+a:hover,
+a:focus,
+a:link:active,
+a:visited:active {
+  color: (internal value);
+}
+
+/*======= TYPOGRAPHY ===========*/
+h1 {
+  font-size: var(--header1);
+}
+
+h2 {
+  font-size: var(--header2);
+}
+
+h3 {
+  font-size: var(--header3);
+}
+
+h4 {
+  font-size: var(--header4);
+}

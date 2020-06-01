@@ -1,0 +1,161 @@
+/*======= NAVIGATION ===========*/
+nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/*======= NAVIGATION BURGER ===========*/
+#burger {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10;
+}
+
+.burger {
+  padding: 0.15rem 1.6rem;
+  margin: 0.6rem 0;
+  background-color: var(--dark);
+  display: block;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.b1 {
+  -webkit-transform: rotateZ(45deg) translateY(420%);
+          transform: rotateZ(45deg) translateY(420%);
+}
+
+.b2 {
+  opacity: 0;
+}
+
+.b3 {
+  -webkit-transform: rotateZ(-45deg) translateY(-420%);
+          transform: rotateZ(-45deg) translateY(-420%);
+}
+
+.mobile-menu {
+  display: block;
+}
+
+footer {
+  margin-top: auto;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/*======= MEDIA QUERY ===========*/
+@media (min-width: 700px) {
+  /*======= ================= ===========*/
+  /*======= ================== ===========*/
+}
+
+@media (min-width: 1000px) {
+  /*======= ================= ===========*/
+  /*======= ================== ===========*/
+}
+
+/*======= GLOBAL STYLES ===========*/
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100vw;
+  overflow-x: hidden;
+  color: #111;
+  font-size: calc(1.5rem + 1vw);
+}
+
+img {
+  width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+a:link,
+a:visited {
+  color: internal value;
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-transition: color 0.5s ease-in-out;
+  transition: color 0.5s ease-in-out;
+}
+
+a:hover,
+a:focus,
+a:link:active,
+a:visited:active {
+  color: internal value;
+}
+
+/*======= TYPOGRAPHY ===========*/
+h1 {
+  font-size: var(--header1);
+}
+
+h2 {
+  font-size: var(--header2);
+}
+
+h3 {
+  font-size: var(--header3);
+}
+
+h4 {
+  font-size: var(--header4);
+}
+/*# sourceMappingURL=style.css.map */

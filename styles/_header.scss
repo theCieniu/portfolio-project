@@ -1,0 +1,39 @@
+/*======= NAVIGATION ===========*/
+nav {
+  ul {
+    @include flex(row, space-between);
+  }
+}
+
+/*======= NAVIGATION BURGER ===========*/
+#burger {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10;
+}
+
+.burger {
+  padding: 0.15rem 1.6rem;
+  margin: 0.6rem 0;
+  background-color: var(--dark);
+  display: block;
+  transition: all 0.5s ease;
+}
+
+.b1 {
+  transform: rotateZ(45deg) translateY(420%);
+}
+
+.b2 {
+  opacity: 0;
+}
+
+.b3 {
+  transform: rotateZ(-45deg) translateY(-420%);
+}
+
+.mobile-menu {
+  display: block;
+}
