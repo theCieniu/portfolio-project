@@ -1,7 +1,27 @@
 /*======= NAVIGATION ===========*/
+header {
+  width: 95%;
+  margin: 0 0 0 auto;
+}
+
 nav {
+  width: 60%;
+  margin: 0 auto 0 0;
+  @include flex(row, space-between, center);
+  min-height: 10vh;
+
+  h1 {
+  }
+
   ul {
-    @include flex(row, space-between);
+    @include flex(row, space-between, center);
+  }
+}
+
+.logo {
+  @include flex(row, center, center);
+  img {
+    max-height: calc($header1 + 1vh);
   }
 }
 
@@ -17,7 +37,7 @@ nav {
 .burger {
   padding: 0.15rem 1.6rem;
   margin: 0.6rem 0;
-  background-color: var(--dark);
+  background-color: $text-color;
   display: block;
   transition: all 0.5s ease;
 }
