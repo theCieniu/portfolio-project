@@ -27,11 +27,13 @@ html {
   scroll-behavior: smooth;
 }
 
+/* $text: 1.6rem;
+$header1: 2rem; */
 body {
   /* width: 100vw;
   overflow-x: hidden; */
   color: #2c2c2c;
-  font-size: 1.6rem;
+  font-size: calc(1.4rem + 0.5vw);
 }
 
 /*
@@ -60,7 +62,7 @@ a:visited:active {
 
 /*======= TYPOGRAPHY ===========*/
 h1 {
-  font-size: 2rem;
+  font-size: calc(1rem + 1vw);
 }
 
 h2 {
@@ -76,14 +78,33 @@ h4 {
 }
 
 /*======= SECTIONS' STYLES ===========*/
+.next {
+  min-height: 100vh;
+  background-color: blue;
+}
+
 /*======= NAVIGATION ===========*/
 header {
   width: 95%;
   margin: 0 0 0 auto;
+  min-height: 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 nav {
-  width: 60%;
+  width: 50%;
   margin: 0 auto 0 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -98,7 +119,8 @@ nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  min-height: 10vh;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 nav ul {
@@ -109,12 +131,20 @@ nav ul {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 10rem;
+          flex: 1 1 10rem;
+}
+
+nav ul li {
+  padding: 1rem 2rem;
+  background-color: white;
+  border-radius: 2rem;
 }
 
 .logo {
@@ -125,16 +155,26 @@ nav ul {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 10rem;
+          flex: 1 1 10rem;
 }
 
 .logo img {
-  max-height: calc($header1 + 1vh);
+  margin: 0.5rem 1rem 0.5rem 0;
+  max-height: 50%;
+}
+
+.active,
+.active a {
+  background-color: #2c2c2c;
+  color: white;
 }
 
 /*======= NAVIGATION BURGER ===========*/
@@ -171,6 +211,160 @@ nav ul {
 
 .mobile-menu {
   display: block;
+}
+
+.splash {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  z-index: -1;
+}
+
+#intro {
+  width: 90%;
+  margin: auto;
+  min-height: 90vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-beetween;
+      -ms-flex-pack: space-beetween;
+          justify-content: space-beetween;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#intro h2 {
+  font-size: 6rem;
+  padding: 2rem 0;
+  background: -webkit-gradient(linear, left top, right top, from(#38d39f), to(#38a4d3));
+  background: linear-gradient(to right, #38d39f, #38a4d3);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+#intro h3 {
+  font-size: 4rem;
+}
+
+#intro p {
+  padding: 2rem 0;
+}
+
+#intro-text,
+#intro-images {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 40rem;
+          flex: 1 1 40rem;
+}
+
+#intro-images svg {
+  width: 100%;
+  margin: 2rem;
+}
+
+.intro-social img {
+  margin: 2rem 2rem 2rem 0;
+}
+
+#plant-left {
+  -webkit-animation: leaf 1.5s ease-in-out infinite alternate;
+          animation: leaf 1.5s ease-in-out infinite alternate;
+}
+
+#plant-right {
+  animation: leaf 3s ease-in-out infinite alternate-reverse;
+}
+
+@-webkit-keyframes leaf {
+  from {
+    -webkit-transform: translateY(0) translateX(0);
+            transform: translateY(0) translateX(0);
+  }
+  to {
+    -webkit-transform: translateY(5%) translateX(-1%);
+            transform: translateY(5%) translateX(-1%);
+  }
+}
+
+@keyframes leaf {
+  from {
+    -webkit-transform: translateY(0) translateX(0);
+            transform: translateY(0) translateX(0);
+  }
+  to {
+    -webkit-transform: translateY(5%) translateX(-1%);
+            transform: translateY(5%) translateX(-1%);
+  }
+}
+
+#me {
+  -webkit-animation: me 1s ease-in-out infinite alternate;
+          animation: me 1s ease-in-out infinite alternate;
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+}
+
+@-webkit-keyframes me {
+  from {
+    -webkit-transform: rotateZ(-1deg);
+            transform: rotateZ(-1deg);
+  }
+  to {
+    -webkit-transform: rotateZ(1deg);
+            transform: rotateZ(1deg);
+  }
+}
+
+@keyframes me {
+  from {
+    -webkit-transform: rotateZ(-1deg);
+            transform: rotateZ(-1deg);
+  }
+  to {
+    -webkit-transform: rotateZ(1deg);
+            transform: rotateZ(1deg);
+  }
+}
+
+#clock-arrow {
+  -webkit-animation: clock-tip linear 9s infinite;
+          animation: clock-tip linear 9s infinite;
+  transform-box: fill-box;
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+}
+
+@-webkit-keyframes clock-tip {
+  from {
+    -webkit-transform: rotateZ(0);
+            transform: rotateZ(0);
+  }
+  to {
+    -webkit-transform: rotateZ(360deg);
+            transform: rotateZ(360deg);
+  }
+}
+
+@keyframes clock-tip {
+  from {
+    -webkit-transform: rotateZ(0);
+            transform: rotateZ(0);
+  }
+  to {
+    -webkit-transform: rotateZ(360deg);
+            transform: rotateZ(360deg);
+  }
 }
 
 footer {

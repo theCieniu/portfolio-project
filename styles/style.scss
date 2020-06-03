@@ -13,7 +13,7 @@ $color2: #32c8b3;
 $whitish: #fffff5;
 */
 
-$gradient: linear-gradient(left, #38d39f, #38a4d3);
+$gradient: linear-gradient(to right, #38d39f, #38a4d3);
 $bgcolor: #154353;
 $text-color: #2c2c2c;
 
@@ -38,8 +38,8 @@ html {
   scroll-behavior: smooth;
 }
 
-$text: 1.6rem;
-$header1: 2rem;
+/* $text: 1.6rem;
+$header1: 2rem; */
 $header2: 5rem;
 $header3: 4rem;
 $header4: 3rem;
@@ -49,7 +49,7 @@ body {
   /* width: 100vw;
   overflow-x: hidden; */
   color: $text-color;
-  font-size: $text;
+  font-size: calc(1.4rem + 0.5vw);
 }
 
 /*
@@ -78,7 +78,7 @@ a:visited:active {
 
 /*======= TYPOGRAPHY ===========*/
 h1 {
-  font-size: $header1;
+  font-size: calc(1rem + 1vw);
 }
 
 h2 {
@@ -94,6 +94,12 @@ h4 {
 }
 
 /*======= SECTIONS' STYLES ===========*/
+
+.next {
+  min-height: 100vh;
+  background-color: blue;
+}
+
 @import "header";
 @import "intro";
 @import "footer";

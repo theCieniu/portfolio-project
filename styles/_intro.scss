@@ -1,0 +1,90 @@
+.splash {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  z-index: -1;
+}
+
+#intro {
+  width: 90%;
+  margin: auto;
+  min-height: 90vh;
+  @include flex(row, space-beetween, center);
+  flex-wrap: wrap;
+  h2 {
+    font-size: 6rem;
+    padding: 2rem 0;
+    background: $gradient;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+  }
+  h3 {
+    font-size: 4rem;
+  }
+  p {
+    padding: 2rem 0;
+  }
+}
+
+#intro-text,
+#intro-images {
+  flex: 1 1 40rem;
+}
+
+#intro-images svg {
+  width: 100%;
+  margin: 2rem;
+}
+
+.intro-social img {
+  margin: 2rem 2rem 2rem 0;
+}
+
+#plant-left {
+  animation: leaf 1.5s ease-in-out infinite alternate;
+}
+
+#plant-right {
+  animation: leaf 3s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes leaf {
+  from {
+    transform: translateY(0) translateX(0);
+  }
+  to {
+    transform: translateY(5%) translateX(-1%);
+  }
+}
+
+#me {
+  animation: me 1s ease-in-out infinite alternate;
+  transform-origin: bottom;
+}
+
+@keyframes me {
+  from {
+    transform: rotateZ(-1deg);
+  }
+  to {
+    transform: rotateZ(1deg);
+  }
+}
+
+#clock-arrow {
+  animation: clock-tip linear 9s infinite;
+  transform-box: fill-box;
+  transform-origin: bottom;
+}
+
+@keyframes clock-tip {
+  from {
+    transform: rotateZ(0);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}

@@ -2,27 +2,40 @@
 header {
   width: 95%;
   margin: 0 0 0 auto;
+  min-height: 10vh;
+  @include flex(row, flex-start, center);
 }
 
 nav {
-  width: 60%;
+  width: 50%;
   margin: 0 auto 0 0;
   @include flex(row, space-between, center);
-  min-height: 10vh;
-
-  h1 {
-  }
+  flex-wrap: wrap;
 
   ul {
-    @include flex(row, space-between, center);
+    @include flex(row, space-around, center);
+    flex: 1 1 10rem;
+    li {
+      padding: 1rem 2rem;
+      background-color: white;
+      border-radius: 2rem;
+    }
   }
 }
 
 .logo {
-  @include flex(row, center, center);
+  @include flex(row, flex-start, center);
+  flex: 1 1 10rem;
   img {
-    max-height: calc($header1 + 1vh);
+    margin: 0.5rem 1rem 0.5rem 0;
+    max-height: 50%;
   }
+}
+
+.active,
+.active a {
+  background-color: $text-color;
+  color: white;
 }
 
 /*======= NAVIGATION BURGER ===========*/
