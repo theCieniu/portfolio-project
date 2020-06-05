@@ -45,6 +45,7 @@ ul {
   list-style: none;
 }
 
+a,
 a:link,
 a:visited {
   color: #2c2c2c;
@@ -378,7 +379,11 @@ nav ul li {
 }
 
 footer {
+  background: -webkit-gradient(linear, left top, right top, from(#38d39f), to(#38a4d3));
+  background: linear-gradient(to right, #38d39f, #38a4d3);
+  color: white;
   margin-top: auto;
+  padding: 2rem;
   text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -387,9 +392,9 @@ footer {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -411,17 +416,58 @@ footer ul {
           align-items: center;
 }
 
+footer i {
+  margin: auto 1.5rem;
+}
+
+footer a,
+footer a:link,
+footer a:visited {
+  color: white;
+}
+
+#projects {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  text-align: center;
+  min-height: 90vh;
+  margin: auto;
+}
+
+#projects div {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 40rem;
+          flex: 1 1 40rem;
+  margin: 2rem;
+}
+
+#projects h2 {
+  margin: 3rem;
+  background: -webkit-gradient(linear, left top, right top, from(#38d39f), to(#38a4d3));
+  background: linear-gradient(to right, #38d39f, #38a4d3);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+#projects img {
+  max-width: 90%;
+}
+
 /*======= MEDIA QUERY ===========*/
-@media (min-width: 700px) {
-  /*======= ================= ===========*/
-  /*======= ================== ===========*/
-}
-
-@media (min-width: 1000px) {
-  /*======= ================= ===========*/
-  /*======= ================== ===========*/
-}
-
 @media screen and (max-width: 1170px) {
   #intro-text {
     margin-right: 10vw;

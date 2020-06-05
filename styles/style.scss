@@ -62,6 +62,7 @@ ul {
   list-style: none;
 }
 
+a,
 a:link,
 a:visited {
   color: $text-color;
@@ -104,62 +105,5 @@ h4 {
 @import "header";
 @import "intro";
 @import "footer";
+@import "projects";
 @import "responsive";
-
-@media screen and (max-width: 1170px) {
-  #intro-text {
-    margin-right: 10vw;
-    flex: 2 1 25rem;
-  }
-
-  nav {
-    width: 100%;
-  }
-  #intro-images svg {
-    height: 60%;
-  }
-}
-
-@media screen and (max-width: 1000px) {
-  html {
-    font-size: 50%;
-  }
-}
-
-@media screen and (max-width: 700px) {
-  #intro {
-    width: 100%;
-    padding: 0;
-    margin: 0;
-  }
-  .splash {
-    display: none;
-  }
-  header {
-    background: $gradient;
-    width: 100%;
-    padding: 0.5rem 2rem;
-  }
-  .logo {
-    color: white;
-  }
-  h1 {
-    font-size: 2.6rem;
-  }
-  .logo {
-    @include flex(row, center, center);
-  }
-  #intro-text {
-    margin: 5rem;
-    text-align: center;
-  }
-  .intro-social img {
-    margin: 2rem;
-  }
-  #intro-images {
-    width: 100%;
-    margin: 2rem 0;
-    padding: 2rem;
-    background: $gradient;
-  }
-}

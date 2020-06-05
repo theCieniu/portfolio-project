@@ -1,0 +1,23 @@
+#projects {
+  @include flex(row, space-around, center);
+  flex-wrap: wrap;
+  text-align: center;
+  min-height: 90vh;
+  margin: auto;
+  div {
+    flex: 1 1 40rem;
+    margin: 2rem;
+  }
+
+  h2 {
+    margin: 3rem;
+    background: $gradient;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+  }
+  img {
+    max-width: 90%;
+  }
+}

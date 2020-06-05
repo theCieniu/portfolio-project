@@ -1,8 +1,19 @@
 footer {
+  background: $gradient;
+  color: white;
   margin-top: auto;
+  padding: 2rem;
   text-align: center;
-  @include flex(row, center, center);
+  @include flex(row, space-between, center);
   ul {
     @include flex(row, center, center);
+  }
+  i {
+    margin: auto 1.5rem;
+  }
+  a,
+  a:link,
+  a:visited {
+    color: white;
   }
 }
