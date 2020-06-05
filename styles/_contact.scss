@@ -1,0 +1,39 @@
+.contact {
+  @include flex(row, center, center);
+  min-height: 80vh;
+}
+form {
+  @include flex(column, space-around, center);
+  padding: 3rem;
+  margin: 3rem;
+  box-shadow: 0 5px 10px rgba($color: #000000, $alpha: 0.2),
+    0 20px 40px rgba($color: #000000, $alpha: 0.2);
+  border-radius: 2rem;
+  label {
+    margin: 1rem;
+  }
+  input,
+  textarea {
+    margin: 1rem 0;
+    padding: 0.5rem 1rem;
+    font-size: 1.6rem;
+    font-family: "Montserrat", sans-serif;
+  }
+  input:focus,
+  textarea:focus {
+    outline: 2px solid black;
+  }
+  button {
+    margin: 1rem;
+    padding: 1rem 2rem;
+    background: $text-color;
+    color: white;
+    border: none;
+    font-size: calc(1.4rem + 0.5vw);
+    font-family: "Montserrat", sans-serif;
+    border-radius: 2rem;
+  }
+  button:focus {
+    background: $gradient;
+  }
+}

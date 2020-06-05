@@ -97,13 +97,9 @@ h4 {
 
 /*======= SECTIONS' STYLES ===========*/
 
-.next {
-  min-height: 100vh;
-  background: $gradient;
-}
-
 @import "header";
 @import "intro";
 @import "footer";
 @import "projects";
+@import "contact";
 @import "responsive";

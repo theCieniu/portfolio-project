@@ -5,6 +5,8 @@ footer {
   padding: 2rem;
   text-align: center;
   @include flex(row, space-between, center);
+  flex-wrap: wrap;
+  min-height: 10vh;
   ul {
     @include flex(row, center, center);
   }

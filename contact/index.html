@@ -41,8 +41,8 @@
         </div>
         <ul class="nav-links">
           <li><a href="../index.html">Home</a></li>
-          <li class="active"><a href="index.html">Project</a></li>
-          <li><a href="../contact/">Contact</a></li>
+          <li><a href="../projects/index.html">Project</a></li>
+          <li class="active"><a href="index.html">Contact</a></li>
         </ul>
         <!-- 
                 <div id="burger">
@@ -54,26 +54,41 @@
     </header>
 
     <main>
-      <section id="projects">
-        <div id="travelly">
-          <a
-            href="https://thecieniu.github.io/travel-website/"
-            target="_blank"
-            title="travel agency website project"
-            ><h2>Travelly</h2>
-            <img src="../img/travelly.jpg" alt="travel agency website project"
-          /></a>
-        </div>
-        <div id="iona-joy">
-          <a
-            href="https://thecieniu.github.io/photography-website/"
-            target="_blank"
-            title="nature photography website project"
-          >
-            <h2>Iona Joy</h2>
-            <img src="../img/iona-joy.jpg" alt="photography website project"
-          /></a>
-        </div>
+      <section class="contact">
+        <form action="">
+          <label for="name"
+            >Name:
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Your name"
+              required
+            />
+          </label>
+          <label for="email"
+            >Email:
+            <input
+              type="text"
+              id="email"
+              name="email"
+              placeholder="Your email"
+              required
+            />
+          </label>
+          <label for="message"
+            >Message:<br />
+            <textarea
+              type="message"
+              id="message"
+              name="message"
+              cols="30"
+              rows="10"
+              required
+            ></textarea>
+          </label>
+          <button type="submit">Submit</button>
+        </form>
       </section>
     </main>
 

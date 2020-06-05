@@ -80,12 +80,6 @@ h4 {
 }
 
 /*======= SECTIONS' STYLES ===========*/
-.next {
-  min-height: 100vh;
-  background: -webkit-gradient(linear, left top, right top, from(#38d39f), to(#38a4d3));
-  background: linear-gradient(to right, #38d39f, #38a4d3);
-}
-
 /*======= NAVIGATION ===========*/
 header {
   width: 95%;
@@ -398,6 +392,9 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  min-height: 10vh;
 }
 
 footer ul {
@@ -465,6 +462,76 @@ footer a:visited {
 
 #projects img {
   max-width: 90%;
+}
+
+.contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 80vh;
+}
+
+form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 3rem;
+  margin: 3rem;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2), 0 20px 40px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2), 0 20px 40px rgba(0, 0, 0, 0.2);
+  border-radius: 2rem;
+}
+
+form label {
+  margin: 1rem;
+}
+
+form input,
+form textarea {
+  margin: 1rem 0;
+  padding: 0.5rem 1rem;
+  font-size: 1.6rem;
+  font-family: "Montserrat", sans-serif;
+}
+
+form input:focus,
+form textarea:focus {
+  outline: 2px solid black;
+}
+
+form button {
+  margin: 1rem;
+  padding: 1rem 2rem;
+  background: #2c2c2c;
+  color: white;
+  border: none;
+  font-size: calc(1.4rem + 0.5vw);
+  font-family: "Montserrat", sans-serif;
+  border-radius: 2rem;
+}
+
+form button:focus {
+  background: -webkit-gradient(linear, left top, right top, from(#38d39f), to(#38a4d3));
+  background: linear-gradient(to right, #38d39f, #38a4d3);
 }
 
 /*======= MEDIA QUERY ===========*/
@@ -538,6 +605,14 @@ footer a:visited {
     padding: 2rem;
     background: -webkit-gradient(linear, left top, right top, from(#38d39f), to(#38a4d3));
     background: linear-gradient(to right, #38d39f, #38a4d3);
+  }
+  form {
+    margin: 2rem 0;
+  }
+  footer {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 /*# sourceMappingURL=style.css.map */
